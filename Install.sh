@@ -55,8 +55,10 @@ echo '#!/bin/sh -e' > /etc/rc.local
 echo "#" >> /etc/rc.local
 echo "# rc.local" >> /etc/rc.local
 echo "#" >> /etc/rc.local
+echo "sleep 3" >> /etc/rc.local
 echo "sudo etherwake 04:D9:F5:FA:31:20 &" >> /etc/rc.local
 echo "echo 'on 0.0.0.0' | cec-client -s -d 1 &" >> /etc/rc.local
+echo "sleep 8" >> /etc/rc.local
 echo "sudo -H -u pi moonlight-qt stream ["NAME_OF_PC"] ["NAME_OF_APP"] &" >> /etc/rc.local
 echo "" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
